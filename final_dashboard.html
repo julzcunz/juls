@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+		body{
+			background-color: white;
+			background-repeat: no-repeat;
+			background-size: 100%
+
+		}
+
+		#lblue{
+			background: #f0d5bb;
+			width: 2000px;
+			height: 100px;
+			margin-top: -10px;
+			margin-left: -10px;
+			position: static;
+		}
+
+		#inpt{
+			border-radius: 15px;
+			text-align: center;
+			margin-top: 40px;
+			font-size: 20px;
+			margin-left: 1620px;
+			width: 200px;
+		}
+
+		#sicon{
+			width: 25px;
+			margin-left: -40px;
+			margin-bottom: -7px;
+			margin-top: 45px;
+			position: fixed;
+			color: black;
+		}
+
+		#ptext{
+			float: right;
+			margin-top: -60px;
+			margin-right: 50px;
+		}
+
+		#logo{
+			margin-left: 50px;
+			height: 120px;
+			margin-top: -80px;
+			position: static;
+		}
+
+
+		h3{
+			font-size: 30px;
+			margin-left: 240px;
+			margin-top: 25px;
+		}
+
+		#ari{
+			background: linear-gradient(to left, #fcf4ed#fcf4ed#fcf4ed, #0000FF);
+			width: 300px;
+			margin-left: 600px;
+			height: 120px;
+			margin-top: -350px;
+			color: orange;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 20px  #b59274;
+
+		}
+
+		#num{
+			font-size: 60px;
+			margin-bottom: -30px;
+
+		}
+
+		#txt{
+			font-size: 30px;
+		}
+
+		#dep{
+			background: linear-gradient(to left, #fcf4ed#fcf4ed#fcf4ed, #0000FF);
+			width: 300px;
+			margin-left: 600px;
+			height: 120px;
+			margin-top: -30px;
+			color: orange;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 20px  #b59274;
+
+		}
+
+		#num2{
+			font-size: 60px;
+			margin-bottom: -30px;
+		}
+
+		#txt2{
+			font-size: 30px;
+		}
+
+		#new{
+			background: linear-gradient(to left, #fcf4ed#fcf4ed, #0000FF);
+			width: 300px;
+			margin-left: 1000px;
+			height: 120px;
+			margin-top: -330px;
+			color: orange;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 20px  #b59274;
+
+		}
+
+		#num3{
+			font-size: 60px;
+			margin-bottom: -30px;
+		}
+
+		#txt3{
+			font-size: 30px;
+		}
+
+		#rej{
+			background: linear-gradient(to left, #fcf4ed#fcf4ed, #0000FF);
+			width: 300px;
+			margin-left: 1000px;
+			height: 120px;
+			margin-top: -30px;
+			color: orange;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 20px  #b59274;
+
+		}
+
+		#num4{
+			font-size: 60px;
+			margin-bottom: -30px;
+		}
+
+		#txt4{
+			font-size: 30px;
+		}
+
+		#all{
+			background: linear-gradient(to left, #fcf4ed#fcf4ed, #0000FF);
+			position: static;
+			width: 300px;
+			margin-left: 1400px;
+			height: 120px;
+			margin-top: -250px;
+			color: orange;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 20px #b59274;
+
+		}
+
+		#num5{
+			font-size: 60px;
+			margin-bottom: -30px;
+		}
+
+		#txt5{
+			font-size: 30px;
+		}
+
+		#lineGraph{
+			position: absolute;
+			margin-left:100px;
+			margin-top: 150px;
+			box-shadow: 0px 5px 20px #b59274;
+		}
+
+		#home{
+			margin-left: 400px;
+			margin-top: -30px;
+			position: absolute;
+			font-size: 20px;
+			color: white;
+		}
+
+		#barGraph{
+			position: absolute;
+			box-shadow: 0px 5px 20px #b59274;
+			margin-left:990px;
+			margin-top: 150px;
+		}
+
+		#dashb{
+			position: absolute;
+			margin-top: -40px;
+			margin-left: 850px;
+			color: black;
+		}
+</style>
+</head>
+<body>
+
+ 	<div id="lblue">
+ 		<div><input type="text" id="inpt" placeholder="search"><a href="#contact"><i class="fa fa-fw fa fa-search" id="sicon"></i></a><h1 id="dashb">DASHBOARD</h1></div>
+ 		<div>
+ 			<a href="index.html"><img src="logo.png" id="logo"></a>
+ 		</div>
+ 	</div>
+ 	<br>
+ 	<h3>Reservation Type</h3>
+ 	<div id="mpc"><canvas id="myPieChart" width="300" height="300"></canvas></div>
+
+ 	<div id="ari">
+ 			<p id="num">93</p>
+ 			<p id="txt">Expected Arrival</p>
+ 	</div>
+
+ 	<div id="dep">
+ 			<p id="num2">68</p>
+ 			<p id="txt2">Expected Departure</p>
+ 	</div>
+
+ 	<div id="new">
+ 			<p id="num3">59</p>
+ 			<p id="txt3">New Bookings</p>
+ 	</div>
+
+
+ 	<div id="rej">
+ 			<p id="num4">15</p>
+ 			<p id="txt4">Rejected Bookings</p>
+ 	</div>
+
+ 		<div id="all">
+ 			<p id="num5">220</p>
+ 			<p id="txt5">All Bookings</p>
+ 	</div>
+    
+    <div>
+    	<img src="pg.png" style="position: absolute; top: 205px; left: 208px; border: solid black;">
+    </div>
+
+    <div>
+    	<img src="lg.png" style="position: absolute; top: 605px; left: 190px; border: solid black;">
+    </div>
+
+    <div>
+    	<img src="bg.png" style="position: absolute; top: 605px; left: 1100px; border: solid black;">
+    </div>
+</body>
+</html> 
